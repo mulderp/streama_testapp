@@ -1,0 +1,22 @@
+defaults: &defaults
+  host: localhost
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019
+
+development:
+  <<: *defaults
+  database: streama_development 
+
+test:
+  <<: *defaults
+  database: streama_test
+
+# set these environment variables on your prod server
+production:
+  host: localhost 
+  port: 27017
+  # username: <%= ENV['MONGOID_USERNAME'] %>
+  # password: <%= ENV['MONGOID_PASSWORD'] %>

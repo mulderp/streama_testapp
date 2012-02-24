@@ -1,0 +1,22 @@
+<div id="main">
+  
+  <h1>Streama Test Application</h1>
+  <div id="network-update" >
+    <span>
+    What is happening in the world??
+    </span>
+    <%= form_for(@network_update) do |f| %>
+      <div class="clearfix span10">
+        <%= f.text_field :content, :value => "", :placeholder => "Share links, news, ideas here ...", :size => 100, :class => "update-input" %>
+      </div>
+        <%= submit_tag "Send this" %>
+    <% end %>
+  
+  </div>
+  <div>
+    <%= @activities.to_a.each do |a| %>
+      <%= a %>
+    <% end %>
+  
+  </div>
+</div>
