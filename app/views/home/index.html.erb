@@ -14,9 +14,16 @@
   
   </div>
   <div>
-    <%= @activities.to_a.each do |a| %>
-      <%= a %>
+    <ul>
+    <% @activities.each do |a| %>
+      <li>
+      <%= User.find(a.actor["id"]).first_name %>
+      <%= a.verb %>s
+      <%= Kernel.const_get(a.object["type"]).send(:find, a.object["id"]).content %>
+      
+    </li>
     <% end %>
+  </ul>
   
   </div>
 </div>

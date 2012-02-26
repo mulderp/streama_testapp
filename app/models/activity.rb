@@ -20,8 +20,8 @@ class Activity
 
   activity :share do
     actor :user
-    object :link
-    target_object :newsfeed
+    object :network_update
+    # target_object :newsfeed
   end
     
 end
