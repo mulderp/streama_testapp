@@ -64,5 +64,5 @@ gem "guard-cucumber", ">= 0.6.1", :group => :development
 gem "bson_ext", ">= 1.5.2"
 gem "mongoid", ">= 2.4.4"
 gem "devise", ">= 2.0.4"
-gem "bootstrap-sass", "~> 2.0.1"
+gem "twitter-bootstrap-rails"
 gem "streama"
