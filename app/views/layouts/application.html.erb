@@ -14,11 +14,17 @@
   <body class="<%= params[:controller] %>">
     <div id="container" class="container">
       <header>
-        <nav>
-          <ul class="hmenu">
-            <%= render 'shared/navigation' %>
-          </ul>
-        </nav>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <%= link_to "Streama Web", "#", :class => "brand" %>
+              <ul class="nav pull-right">
+                <%= render 'shared/navigation' %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <%= render_tabs(self) %>
         <%- flash.each do |name, msg| -%>
           <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
         <%- end -%>

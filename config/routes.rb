@@ -1,5 +1,7 @@
 TestStreama::Application.routes.draw do
  
+  resources :verbs, :only => :index
+
   devise_for :users
 
   resources :network_updates

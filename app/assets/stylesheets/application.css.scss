@@ -6,6 +6,12 @@
  *= require_tree . 
 */
 
+a.brand {
+  color: black;
+  font-size: 20px;
+  font-family: helvetica;
+  font-weight: bold;
+}
 @import 'bootstrap';
 header nav ul {
   list-style: none;
@@ -26,5 +32,11 @@ header nav ul li {
 #flash_alert {
   background-color: #FCC;
   border: solid 1px #C66;
+}
+
+.navbar, div.navbar-inner, div.navbar-inner .container{
+  background-color: white;
+  border: none;
+  padding: 0;
 }
 

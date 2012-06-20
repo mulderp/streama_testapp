@@ -19,6 +19,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'backbone-on-rails'
+gem 'display_case'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
