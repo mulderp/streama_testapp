@@ -1,27 +1,25 @@
-<div id="main">
+<div class="container">
 
   
-  <h1>Streama Test Application</h1>
-  <div id="network-update" >
-    <span>
-    What is happening in the world??
+  <div id="network-update" class="span12">
+    <span style="margin-left:30px; margin-top: 10px; margin-bottom: 10px">
+      <h4>What is happening in the world??</h4>
     </span>
-    <%= form_for(@network_update) do |f| %>
-      <div class="clearfix span10">
+    <%= form_for(@network_update, :html => {:class => "well span8"}) do |f| %>
+      <div class="control-group">
         <%= f.text_field :content, :value => "", :placeholder => "Share links, news, ideas here ...", :size => 100, :class => "update-input" %>
       </div>
-        <%= submit_tag "Send this" %>
-    <% end %>
-  
+      <%= submit_tag "Send this", :class => "btn" %>
+    <% end %> 
   </div>
-  <div>
+
+  <div class="container">
     <ul>
     <% @activities.each do |a| %>
       <li>
       <%= User.find(a.actor["id"]).first_name %>
       <%= a.verb %>s
-      <%= Kernel.const_get(a.object["type"]).send(:find, a.object["id"]).content %>
-      
+      <%= Kernel.const_get(a.object["type"]).send(:find, a.object["id"]).content %>    
     </li>
     <% end %>
   </ul>

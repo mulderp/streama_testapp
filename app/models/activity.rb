@@ -18,7 +18,7 @@ class Activity
     object :photo
   end
 
-  activity :share do
+  activity :post do
     actor :user
     object :network_update
     # target_object :newsfeed

@@ -16,4 +16,5 @@ TestStreama::Application.routes.draw do
     match "/signin" => "devise/sessions#new", :as => :signin
   end
   match 'home' => 'home#index', as: :user_root 
+  match 'json_stream' => 'home#json_stream', as: :json_stream 
 end

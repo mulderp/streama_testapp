@@ -3,8 +3,11 @@ class VerbsController < ApplicationController
   include DisplayCase::ExhibitsHelper
 
   def index
-    Rails.logger.info(Streama::Definition.registered)
-    @verbs = exhibit(Streama::Definition.registered)
+    verbs = Streama::Definition.registered.map { |verb| verb.name.to_s }.uniq
+    Rails.logger.info(verbs)
+    @verbs = exhibit(verbs)
   end
+
+  private
 
 end
