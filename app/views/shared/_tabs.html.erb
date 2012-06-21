@@ -1,8 +1,9 @@
 <div class="tabbable">
   <ul class="nav nav-tabs">
-    <li class="<%= is_active == "HomeController"? "active" : "" %>"><%= link_to "Streams", root_path %></li>
-    <li class="<%= is_active == "HomeController#json_stream"? "active" : "" %>"><%= link_to "JSON Stream", json_stream_path  %></li>
-    <li class="<%= is_active == "ActorsController"? "active" : "" %>"><%= link_to "Actors", "#" %></li>
-    <li class="<%= is_active == "VerbsController"? "active" : "" %>"><%= link_to "Verbs", verbs_path %></li>
+    <li class="<%= is_active == "HomeController#index"? "active" : "" %>"><%= link_to "Public activities", root_path %></li>
+    <li class="<%= is_active == "HomeController#my_activities"? "active" : "" %>"><%= link_to "My activities", root_path %></li>
+    <li class="<%= is_active == "HomeController#json_stream"? "active" : "" %>"><%= link_to "JSON Activity Stream", json_stream_path  %></li>
+    <li class="<%= is_active == "ActorsController#index"? "active" : "" %>"><%= link_to "Actors", "#" %></li>
+    <li class="<%= is_active == "VerbsController#index"? "active" : "" %>"><%= link_to "Verbs", verbs_path %></li>
   </ul>
 </div>

@@ -7,7 +7,9 @@ class HomeController < ApplicationController
 
   def json_stream
     @network_update = NetworkUpdate.new
-    @activities = exhibit(Activity.all.to_ary)
+    activities = exhibit(Activity.all.to_ary)
+    @activities = activities.map { |a| a.render_json }
+#    @activities = exhibit(Activity.all.to_ary)
   end
 
 end

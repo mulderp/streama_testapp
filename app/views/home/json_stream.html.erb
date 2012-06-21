@@ -1,3 +1,1 @@
-<% @activities.each do |a| %>
-  <%= a.render_json %>,
-<% end %>
+<%= @activities.join(",   </br>").html_safe %>
