@@ -51,6 +51,14 @@ namespace :db do
   end
 end
 
+set :branch do
+  default_tag = `git tag`.split("\n").last
+
+  tag = Capistrano::CLI.ui.ask "Tag to deploy (make sure to push the tag first): [#{default_tag}] "
+  tag = default_tag if tag.empty?
+  tag
+end
+
 # after "deploy:rollback:revision", "bundler:install"
 # after "deploy:update_code", "bundler:bundle_new_release"
 after "deploy:update_code", "db:symlink" 
