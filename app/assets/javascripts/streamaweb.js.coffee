@@ -1,4 +1,4 @@
-window.TestStreama =
+window.Streamaweb =
   Models: {}
   Collections: {}
   Views: {}
@@ -6,4 +6,4 @@ window.TestStreama =
   init: -> console.log 'Hello from Backbone!'
 
 $(document).ready ->
-  TestStreama.init()
+  Streamaweb.init()

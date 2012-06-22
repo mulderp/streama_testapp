@@ -2,7 +2,11 @@ class HomeController < ApplicationController
   include DisplayCase::ExhibitsHelper
   def index
     @network_update = NetworkUpdate.new
-    @activities = User.first.activity_stream.to_a
+    if User.all.size == 0
+      @activities = []
+    else
+      @activities = User.first.activity_stream.to_a
+    end
   end
 
   def json_stream
