@@ -11,7 +11,7 @@
 //= require underscore
 //= require backbone
 
-//= require test_streama
+//= require streamaweb
 
 //= require_tree ../templates
 //= require_tree ./models

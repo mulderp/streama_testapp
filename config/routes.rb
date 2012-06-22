@@ -1,4 +1,4 @@
-TestStreama::Application.routes.draw do
+Streamaweb::Application.routes.draw do
  
   resources :verbs, :only => :index
 
