@@ -3,9 +3,9 @@
     <li class="<%= is_active == "HomeController#index"? "active" : "" %>"><%= link_to "Public activities", root_path %></li>
     <li class="<%= is_active == "HomeController#my_activities"? "active" : "" %>"><%= link_to "My activities", root_path %></li>
     <li class="<%= is_active == "HomeController#json_stream"? "active" : "" %>"><%= link_to "JSON Activity Stream", json_stream_path  %></li>
-    <li class="<%= is_active == "ActorsController#index"? "active" : "" %>"><%= link_to "Actors", "#" %></li>
+    <li class="<%= is_active == "ActorsController#index"? "active" : "" %>"><%= link_to "Actors", actors_path %></li>
     <li class="<%= is_active == "VerbsController#index"? "active" : "" %>"><%= link_to "Verbs", verbs_path %></li>
-    <li class="<%= is_active == "VerbsController#index"? "active" : "" %>"><%= link_to "Object", "#objects_path" %></li>
-    <li class="<%= is_active == "VerbsController#index"? "active" : "" %>"><%= link_to "About", "#about_path" %></li>
+    <li class="<%= is_active == "ObjectsController#index"? "active" : "" %>"><%= link_to "Objects", objects_path %></li>
+    <li class="<%= is_active == "HomeController#index"? "active" : "" %>"><%= link_to "About", about_path %></li>
   </ul>
 </div>

@@ -16,4 +16,7 @@ class HomeController < ApplicationController
 #    @activities = exhibit(Activity.all.to_ary)
   end
 
+  def about
+  end
+
 end

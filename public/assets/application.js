@@ -13785,7 +13785,11 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 }).call(this);
 (function() {
 
+<<<<<<< HEAD
   window.TestStreama = {
+=======
+  window.Streamaweb = {
+>>>>>>> styling
     Models: {},
     Collections: {},
     Views: {},
@@ -13796,11 +13800,139 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
   };
 
   $(document).ready(function() {
+<<<<<<< HEAD
     return TestStreama.init();
+=======
+    return Streamaweb.init();
+>>>>>>> styling
   });
 
 }).call(this);
 (function() {
+<<<<<<< HEAD
+=======
+  this.JST || (this.JST = {});
+  this.JST["activities/index"] = function(__obj) {
+    if (!__obj) __obj = {};
+    var __out = [], __capture = function(callback) {
+      var out = __out, result;
+      __out = [];
+      callback.call(this);
+      result = __out.join('');
+      __out = out;
+      return __safe(result);
+    }, __sanitize = function(value) {
+      if (value && value.ecoSafe) {
+        return value;
+      } else if (typeof value !== 'undefined' && value != null) {
+        return __escape(value);
+      } else {
+        return '';
+      }
+    }, __safe, __objSafe = __obj.safe, __escape = __obj.escape;
+    __safe = __obj.safe = function(value) {
+      if (value && value.ecoSafe) {
+        return value;
+      } else {
+        if (!(typeof value !== 'undefined' && value != null)) value = '';
+        var result = new String(value);
+        result.ecoSafe = true;
+        return result;
+      }
+    };
+    if (!__escape) {
+      __escape = __obj.escape = function(value) {
+        return ('' + value)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      };
+    }
+    (function() {
+      (function() {
+      
+      
+      
+      }).call(this);
+      
+    }).call(__obj);
+    __obj.safe = __objSafe, __obj.escape = __escape;
+    return __out.join('');
+  };
+}).call(this);
+(function() {
+  var __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+
+  Streamaweb.Models.Activity = (function(_super) {
+
+    __extends(Activity, _super);
+
+    function Activity() {
+      Activity.__super__.constructor.apply(this, arguments);
+    }
+
+    return Activity;
+
+  })(Backbone.Model);
+
+}).call(this);
+(function() {
+  var __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+
+  Streamaweb.Collections.Activities = (function(_super) {
+
+    __extends(Activities, _super);
+
+    function Activities() {
+      Activities.__super__.constructor.apply(this, arguments);
+    }
+
+    return Activities;
+
+  })(Backbone.Collection);
+
+}).call(this);
+(function() {
+  var __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+
+  Streamaweb.Views.ActivitiesIndex = (function(_super) {
+
+    __extends(ActivitiesIndex, _super);
+
+    function ActivitiesIndex() {
+      ActivitiesIndex.__super__.constructor.apply(this, arguments);
+    }
+
+    ActivitiesIndex.prototype.template = JST['activities/index'];
+
+    return ActivitiesIndex;
+
+  })(Backbone.View);
+
+}).call(this);
+(function() {
+  var __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+
+  Streamaweb.Routers.Activities = (function(_super) {
+
+    __extends(Activities, _super);
+
+    function Activities() {
+      Activities.__super__.constructor.apply(this, arguments);
+    }
+
+    return Activities;
+
+  })(Backbone.Router);
+
+}).call(this);
+(function() {
+>>>>>>> styling
 
 
 
