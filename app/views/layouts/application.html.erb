@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Another</title>
+    <title>Streama Web</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -23,6 +23,9 @@
               </ul>
             </div>
           </div>
+        </div>
+        <div class="well">
+          This demo application for <%= link_to "ActivityStreams", "http://activitystrea.ms" %> is based on the <%= link_to "Streama gem", "https://github.com/christospappas/streama" %> by Christos Pappas that is designed for Ruby-on-Rails and Mongoid. In order to understand better the needs and directions for future use cases for ActivityStreams, it would be great if you could answer <%= link_to "5 questions in this survey", "http://www.surveymonkey.com/s/SSFLJ7B" %> Also, for collaborion in development of ActivityStreams use cases, the source of this application is available at <%= link_to "Github", "https://github.com/mulderp/streama_testapp" %>.
         </div>
         <%= render_tabs(self) %>
         <%- flash.each do |name, msg| -%>
