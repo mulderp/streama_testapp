@@ -13785,11 +13785,7 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 }).call(this);
 (function() {
 
-<<<<<<< HEAD
-  window.TestStreama = {
-=======
   window.Streamaweb = {
->>>>>>> styling
     Models: {},
     Collections: {},
     Views: {},
@@ -13800,17 +13796,11 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
   };
 
   $(document).ready(function() {
-<<<<<<< HEAD
-    return TestStreama.init();
-=======
     return Streamaweb.init();
->>>>>>> styling
   });
 
 }).call(this);
 (function() {
-<<<<<<< HEAD
-=======
   this.JST || (this.JST = {});
   this.JST["activities/index"] = function(__obj) {
     if (!__obj) __obj = {};
@@ -13932,7 +13922,11 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 
 }).call(this);
 (function() {
->>>>>>> styling
+
+
+
+}).call(this);
+(function() {
 
 
 

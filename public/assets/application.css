@@ -4414,11 +4414,7 @@ input[type="submit"].btn.btn-mini {
   color: #999999;
 }
 .navbar .navbar-link:hover {
-<<<<<<< HEAD
-  color: #ffffff;
-=======
   color: #000000;
->>>>>>> styling
 }
 .navbar .btn,
 .navbar .btn-group {
@@ -4604,22 +4600,13 @@ input[type="submit"].btn.btn-mini {
   padding: 5px 5px 6px;
 }
 .navbar .nav > li > a:hover {
-<<<<<<< HEAD
-  background-color: transparent;
-  color: #ffffff;
-=======
   background-color: #cccccc;
   color: #000000;
->>>>>>> styling
   text-decoration: none;
 }
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
-<<<<<<< HEAD
-  color: #ffffff;
-=======
   color: #000000;
->>>>>>> styling
   text-decoration: none;
   background-color: #ffffff;
 }
