@@ -1,19 +1,14 @@
 class HomeController < ApplicationController
   include DisplayCase::ExhibitsHelper
+
   def index
     @network_update = NetworkUpdate.new
-    if User.all.size == 0
-      @activities = []
-    else
-      @activities = User.first.activity_stream.to_a
-    end
+    @activities = current_user.activity_stream if current_user
+    @activities ||= User.guest_user.activity_stream
   end
 
-  def json_stream
-    @network_update = NetworkUpdate.new
-    activities = exhibit(Activity.all.to_ary)
-    @activities = activities.map { |a| a.render_json }
-#    @activities = exhibit(Activity.all.to_ary)
+  def published
+    @activities = exhibit(current_user.published_activities.to_ary)
   end
 
 end

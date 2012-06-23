@@ -53,7 +53,11 @@ class User
   references_many :network_updates
 
   def followers
-    User.all
+    User.excludes(:id => self.id).all
+  end
+
+  def self.guest_user
+    User.first
   end
 end
 

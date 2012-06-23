@@ -9,14 +9,8 @@ class ActivityExhibit < DisplayCase::Exhibit
     actor = [ "actor: {", actor_object, "}" ]
   end
 
-  def to_json
-
-#    s = ["{" ]
-#    s << json_ary.join("\n") 
-#    s << %Q( "verb": "#{__getobj__.verb.to_s}", </br>)
-#    s << %Q( 
-#    s << "}"
-     s = [ 1, 2 => 3 ]
+  def render(context)
+    context.render(:partial => 'home/activity', :locals => { :activity => __getobj__ })
   end
 
   def as_json(attr={})
