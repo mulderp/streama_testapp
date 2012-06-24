@@ -1,7 +1,7 @@
 <div class="tabbable">
   <ul class="nav nav-tabs">
     <li class="<%= is_active == "HomeController#index"? "active" : "" %>"><%= link_to "Public activities", root_path %></li>
-    <li class="<%= is_active == "HomeController#published"? "active" : "" %>"><%= link_to "My activities", published_activities_path %></li>
+    <li class="<%= is_active == "ActivitiesController#published"? "active" : "" %>"><%= link_to "My activities", published_activities_path %></li>
     <li class="<%= is_active == "HomeController#json_stream"? "active" : "" %>"><%= link_to "JSON Activity Stream", api_v1_activities_path(:format => :json) %></li>
     <li class="<%= is_active == "ActorsController#index"? "active" : "" %>"><%= link_to "Actors", actors_path %></li>
     <li class="<%= is_active == "VerbsController#index"? "active" : "" %>"><%= link_to "Verbs", verbs_path %></li>

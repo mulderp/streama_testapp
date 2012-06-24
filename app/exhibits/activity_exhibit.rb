@@ -10,7 +10,7 @@ class ActivityExhibit < DisplayCase::Exhibit
   end
 
   def render(context)
-    context.render(:partial => 'home/activity', :locals => { :activity => __getobj__ })
+    context.render(:partial => 'activities/activity', :locals => { :activity => __getobj__ })
   end
 
   def as_json(attr={})
