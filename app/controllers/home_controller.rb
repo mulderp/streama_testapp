@@ -7,8 +7,5 @@ class HomeController < ApplicationController
     @activities ||= User.guest_user.activity_stream
   end
 
-  def published
-    @activities = exhibit(current_user.published_activities.to_ary)
-  end
 
 end

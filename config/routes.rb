@@ -22,7 +22,7 @@ Streamaweb::Application.routes.draw do
     match "/signin" => "devise/sessions#new", :as => :signin
   end
   match 'home' => 'home#index', as: :user_root 
-  match 'my_activities' => 'home#published', as: :published_activities
+  match 'my_activities' => 'activities#published', as: :published_activities
   match 'about' => 'home#about', as: :about
 
   namespace "api" do
