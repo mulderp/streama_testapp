@@ -4,5 +4,5 @@ class NetworkUpdate
   field :content
   referenced_in :user
 
-  attr_accessible :content, :user
+  attr_accessible :content, :user, :receivers
 end

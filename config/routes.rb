@@ -30,4 +30,9 @@ Streamaweb::Application.routes.draw do
     end
   end
   match 'json_stream' => 'home#json_stream', as: :json_stream 
+
+  namespace "admin" do
+    resources :activities
+    match "activities" => "activities#index"
+  end
 end

@@ -1,0 +1,5 @@
+<h1>Activities Admin</h1>
+<% @activities.each do |activity| %>
+  <%= activity.inspect %></br>
+  <%= link_to "Destroy", admin_activity_path(activity), :method => :delete %>
+<% end %>
