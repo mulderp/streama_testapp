@@ -1,0 +1,3 @@
+<%= User.find(activity.actor["id"]).first_name %>
+<%= network_update.verb %>s
+<%= Kernel.const_get(network_update.object["type"]).send(:find, network_update.object["id"]).content %>    

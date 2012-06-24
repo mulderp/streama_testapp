@@ -2,12 +2,12 @@
 
   
   <div id="network-update" class="span12">
-    <span style="margin-left:30px; margin-top: 10px; margin-bottom: 10px">
-      <h4>What is happening in the world??</h4>
-    </span>
-    <%= form_for(@network_update, :html => {:class => "well span8"}) do |f| %>
+    <%= form_for(@network_update, :html => {:class => "well span5"}) do |f| %>
+      <span style="margin-left:30px; margin-top: 10px; margin-bottom: 10px">
+        <h4>What is happening in the world?</h4>
+      </span>
       <div class="control-group">
-        <%= f.text_field :content, :value => "", :placeholder => "Share links, news, ideas here ...", :size => 100, :class => "update-input" %>
+        <%= f.text_field :content, :value => "", :placeholder => "Share links, news, ideas here ...", :size => 100, :class => "update-input span5" %>
       </div>
       <%= submit_tag "Send this", :class => "btn" %>
     <% end %> 
@@ -15,14 +15,7 @@
 
   <div class="container">
     <ul>
-    <% @activities.each do |a| %>
-      <li>
-      <%= User.find(a.actor["id"]).first_name %>
-      <%= a.verb %>s
-      <%= Kernel.const_get(a.object["type"]).send(:find, a.object["id"]).content %>    
-    </li>
-    <% end %>
-  </ul>
-  
+      <%= @activities.render(self) %>
+    </ul>
   </div>
 </div>

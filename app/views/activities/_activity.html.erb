@@ -1,9 +1,7 @@
 <li>
-  <div class="">
-  Verb: <%= activity.verb %>
-  </div>
-  object: <%= activity.object.inspect %>
-  Created: <%= activity.created_at %>
-  Target object: <%= activity.target_object %>
-  <%= activity.inspect %>
+<%= User.find(activity.actor["id"]).first_name %>
+<%= activity.verb %>s
+<%= Kernel.const_get(activity.object["type"]).send(:find, activity.object["id"]).content %>    
+(at: <%= activity.created_at.strftime("%H:%M %d/%m/%Y")%>)</br>
+<%= "Target object: #{activity.target_object}" unless activity.target_object.nil? %>
 </li>
