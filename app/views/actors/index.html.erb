@@ -1,6 +1,4 @@
 <h1>Actors</h1>
 <ul>
-  <% User.all.each do |user| %>
-    <li><%= user.first_name %></li>
-  <% end %>
+  <%= @actors.render(self) %>
 </ul>

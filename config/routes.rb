@@ -1,5 +1,6 @@
 Streamaweb::Application.routes.draw do
  
+
   get "activities/index"
 
   resources :verbs, :only => :index
@@ -7,6 +8,7 @@ Streamaweb::Application.routes.draw do
   resources :objects, :only => :index
 
   devise_for :users
+  devise_for :admin
 
   resources :network_updates
 
@@ -20,6 +22,7 @@ Streamaweb::Application.routes.draw do
     match "/signin" => "devise/sessions#new", :as => :signin
   end
   match 'home' => 'home#index', as: :user_root 
+  match 'my_activities' => 'activities#published', as: :published_activities
   match 'about' => 'home#about', as: :about
 
   namespace "api" do
@@ -29,4 +32,9 @@ Streamaweb::Application.routes.draw do
     end
   end
   match 'json_stream' => 'home#json_stream', as: :json_stream 
+
+  namespace "admin" do
+    resources :activities
+  end
+  match "admin/activities" => "admin/activities#index", as: :admin_root
 end
