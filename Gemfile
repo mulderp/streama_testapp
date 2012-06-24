@@ -46,4 +46,6 @@ gem "guard-cucumber", ">= 0.6.1", :group => :development
 gem "bson_ext", ">= 1.5.2"
 gem "mongoid", "= 2.4.11"
 gem "devise", ">= 2.0.4"
-gem "streama"
+gem "streama", :git => "git://github.com/christospappas/streama.git"
+#gem "streama", :path => "../streama"
+#gem "pry"

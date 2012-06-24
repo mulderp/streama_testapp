@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-  include DisplayCase::ExhibitsHelper
 
   def index
     @network_update = NetworkUpdate.new
