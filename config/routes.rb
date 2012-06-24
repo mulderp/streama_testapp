@@ -1,5 +1,6 @@
 Streamaweb::Application.routes.draw do
  
+
   get "activities/index"
 
   resources :verbs, :only => :index
@@ -7,6 +8,7 @@ Streamaweb::Application.routes.draw do
   resources :objects, :only => :index
 
   devise_for :users
+  devise_for :admin
 
   resources :network_updates
 
@@ -33,6 +35,6 @@ Streamaweb::Application.routes.draw do
 
   namespace "admin" do
     resources :activities
-    match "activities" => "activities#index"
   end
+  match "admin/activities" => "admin/activities#index", as: :admin_root
 end
