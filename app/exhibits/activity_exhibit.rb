@@ -14,8 +14,14 @@ class ActivityExhibit < DisplayCase::Exhibit
   end
 
   def as_json(attr={})
-    actor_object = { "objectType" => "#{__getobj__.actor['type']}", "id" => "#{__getobj__.actor['id']}"}
-    object = { "objectType" => "#{__getobj__.object['type'].to_s}", "id" => "#{__getobj__.actor['id']}"}
+    actor_object = { "objectType" => "#{__getobj__.actor['type']}", 
+                     "id" => "#{__getobj__.actor['id']}"}
+
+    content = Kernel.const_get(__getobj__.object["type"]).send(:find, __getobj__.object["id"]).content
+    object = { "objectType" => "#{__getobj__.object['type'].to_s}", 
+               "id" => "#{__getobj__.actor['id']}",
+               "content" => content }
+
     { "actor" => actor_object, "verb" => "#{__getobj__.verb}", "object" => object } 
   end
 
