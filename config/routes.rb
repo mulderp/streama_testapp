@@ -1,6 +1,8 @@
 Streamaweb::Application.routes.draw do
  
 
+  resources :profiles
+
   get "activities/index"
 
   resources :verbs, :only => :index
