@@ -1,5 +1,7 @@
+<% @first_name = User.find(activity.actor["id"]).first_name %>
+
 <li class="well activity-well span8">
-<%= User.find(activity.actor["id"]).first_name %>
+  <%= link_to @first_name, profile_path(:id => CGI.escape(@first_name)) %>
 <%= activity.verb %>s
 <%= Kernel.const_get(activity.object["type"]).send(:find, activity.object["id"]).content %>    
 (at: <%= activity.created_at.strftime("%H:%M %d/%m/%Y")%>)</br>

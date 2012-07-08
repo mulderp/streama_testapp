@@ -2,7 +2,7 @@ class Activity
   include Streama::Activity
   
   activity :new_photo do
-    actor :user, :cache => [:full_name]
+    actor :user, :cache => [:first_name]
     object :photo, :cache => [:file]
     target_object :album, :cache => [:title]
   end
@@ -14,12 +14,12 @@ class Activity
   end
   
   activity :new_comment do
-    actor :user, :cache => [:full_name]
+    actor :user, :cache => [:first_name]
     object :photo
   end
 
   activity :post do
-    actor :user
+    actor :user, :cache => [:first_name]
     object :network_update
     # target_object :newsfeed
   end

@@ -1,0 +1,2 @@
+class TargetObjectsController < ApplicationController
+end
