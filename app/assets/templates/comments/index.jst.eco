@@ -1,6 +1,5 @@
-Your comment:
-<form action="#">
-  <input tyoe="text"></input>
-  <input type="submit" value="submit"></input>
+<form action="#" class="span3">
+  <label>Your comment:</label>
+  <input type="text" class="span3" placeholder="Type something ..." />
+  <input type="submit" value="submit" class="btn-mini" />
 </form>
-<%= @actor %>
