@@ -1,11 +1,19 @@
 Streamaweb::Application.routes.draw do
  
 
+  get "comments/create"
+
+  get "comments/new"
+
+  get "comments/index"
+
   resources :target_objects
 
   resources :profiles
 
-  get "activities/index"
+  resources :activities do
+    resources :comments
+  end
 
   resources :verbs, :only => :index
   resources :actors, :only => :index
