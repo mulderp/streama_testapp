@@ -8,7 +8,8 @@ class Streamaweb.Views.CommentsIndex extends Backbone.View
   render: ->
     console.log(@.el)
     actions = $(@el).closest('.actions')
-    actions.replaceWith(@template({actor: $(this)}))
+    input_form = new Streamaweb.Views.CommentsForm({el: actions})
+    input_form.render()
 
   renderOnClick: ->
     console.log("click")

@@ -1,18 +1,12 @@
 Streamaweb::Application.routes.draw do
  
 
-  get "comments/create"
-
-  get "comments/new"
-
-  get "comments/index"
-
   resources :target_objects
 
   resources :profiles
 
   resources :activities do
-    resources :comments
+#    resources :comments
   end
 
   resources :verbs, :only => :index
@@ -41,6 +35,7 @@ Streamaweb::Application.routes.draw do
     namespace "v1" do
       match 'activities.json' => "activities#index", :action => 'index', :format => 'json', :as => :api_activities
       resources :activities
+      resources :comments
     end
   end
   match 'json_stream' => 'home#json_stream', as: :json_stream 
