@@ -2,7 +2,6 @@ class NetworkUpdate
   include Mongoid::Document
 
   field :content
-  referenced_in :user
+  has_one :activity
 
-  attr_accessible :content, :user, :receivers
 end

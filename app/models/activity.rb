@@ -20,9 +20,19 @@ class Activity
 
   activity :post do
     actor :user, :cache => [:first_name]
-    object :network_update
+    object :network_update, :cache => [:content]
     # target_object :newsfeed
   end
+
+  activity :follow do
+    actor :user, :cache => [:first_name]
+    object :user, :cache => [:first_name]
+    # target_object :newsfeed
+  end
+
+  belongs_to :actor, polymorphic: true
+  belongs_to :object, polymorphic: true
+
     
 end
 

@@ -40,6 +40,7 @@ class User
   ## Token authenticatable
   # field :authentication_token, :type => String
   include Streama::Actor  
+  has_many :activities
 
   field :first_name
 
@@ -49,8 +50,6 @@ class User
 
   validates_presence_of :first_name
   validates_uniqueness_of  :email, :case_sensitive => false
-
-  references_many :network_updates
 
   def followers
     User.excludes(:id => self.id).all
