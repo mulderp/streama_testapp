@@ -1,9 +1,9 @@
-<% first_name = activity.actor.first_name %>
+<% first_name = activity.actor['first_name'] %>
 
 <li class="well activity-well span8">
   <%= link_to first_name, profile_path(:id => CGI.escape(first_name)) %>
-<%= activity.verb %>s
-<%= activity.object.content %>    
+  <%= activity.verb %>
+  <%= activity.object['content'] %>    
 (at: <%= activity.created_at.strftime("%H:%M %d/%m/%Y")%>)</br>
 <%= "Target object: #{activity.target_object}" unless activity.target_object.nil? %>
 <div class="actions">

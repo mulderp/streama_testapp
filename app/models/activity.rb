@@ -30,9 +30,5 @@ class Activity
     # target_object :newsfeed
   end
 
-  belongs_to :actor, polymorphic: true
-  belongs_to :object, polymorphic: true
-
-    
 end
 

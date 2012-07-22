@@ -6,8 +6,8 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   ## Database authenticatable
-  field :email,              :type => String, :null => false, :default => ""
-  field :encrypted_password, :type => String, :null => false, :default => ""
+  field :email,              :type => String, :default => ""
+  field :encrypted_password, :type => String, :default => ""
 
   ## Recoverable
   field :reset_password_token,   :type => String
@@ -40,11 +40,11 @@ class User
   ## Token authenticatable
   # field :authentication_token, :type => String
   include Streama::Actor  
-  has_many :activities
 
   field :first_name
-
   field :role
+
+  index({ email: 1 }, { unique: true, background: true })
 
   attr_accessible :first_name, :email, :password, :password_confirmation, :remember_me
 
