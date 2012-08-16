@@ -1,4 +1,8 @@
 class Comment
   include Mongoid::Document
-  field :description, :type => String
+  field :content, :type => String
+
+  field :inReplyTo, :type => String
+
+
 end

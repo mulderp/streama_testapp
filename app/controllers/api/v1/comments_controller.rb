@@ -3,14 +3,17 @@ class Api::V1::CommentsController < ApplicationController
   respond_to :json
 
   def index
-    render :json => "[test: 1]"
+    @comments = Comment.all.to_ary
+    render :json => @comments.to_json
   end
 
   def new
   end
 
   def create
-    comment = Comment.create :content => params[:content]
+    comment = Comment.create :content => params[:content], :inReplyTo => "test"
+    current_user = User.first
+    current_user.publish_activity(:comment, {actor: current_user, object: comment, receivers: current_user.followers})
     respond_with(comment, :status => :ok, :location => "/api/v1/comments")
   end
 

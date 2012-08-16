@@ -13,9 +13,9 @@ class Activity
     target_object :album
   end
   
-  activity :new_comment do
+  activity :comment do
     actor :user, :cache => [:first_name]
-    object :photo
+    object :comment, :cache => [:content, :inReplyTo]
   end
 
   activity :post do
@@ -29,6 +29,8 @@ class Activity
     object :user, :cache => [:first_name]
     # target_object :newsfeed
   end
+
+  has_many :comments
 
 end
 
