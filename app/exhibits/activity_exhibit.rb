@@ -17,7 +17,7 @@ class ActivityExhibit < DisplayCase::Exhibit
     actor = __getobj__.load_instance(:actor).as_json
     object = __getobj__.load_instance(:object).as_json
 
-    { "actor" => actor, "verb" => "#{__getobj__.verb}", "object" => object } 
+    { "id" => __getobj__._id, "actor" => actor, "verb" => "#{__getobj__.verb}", "object" => object } 
   end
 
 end

@@ -1,3 +1,5 @@
-class Streamaweb.Collections.Activities extends Backbone.Collection
+class Streamaweb.Activities extends Backbone.Collection
+  url: 'api/v1/activities.json'
+  model: Streamaweb.Activity
 
 

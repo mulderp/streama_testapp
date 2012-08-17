@@ -12,8 +12,7 @@ class Streamaweb.Views.CommentsForm extends Backbone.View
 
   renderAfterSubmit: ->
     console.log("submit")
-    comments = new Streamaweb.Collections.Comments()
+    comments = new Streamaweb.Comments()
     comments.create({content: this.el.children[0].children[1].value})
-
 
     return false

@@ -1,6 +1,6 @@
-class Streamaweb.Views.CommentsIndex extends Backbone.View
+class Streamaweb.Views.Comment extends Backbone.View
 
-  template: JST['comments/index']
+  template: JST['comments/comment']
 
   events: ->
     { "click" : "renderOnClick" }

@@ -1,0 +1,4 @@
+<div>
+<%= @actor %> <%= @verb %> <%= @object %>
+</div>
+

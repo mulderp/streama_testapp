@@ -1,3 +1,5 @@
-class Streamaweb.Models.Activity extends Backbone.Model
+class Streamaweb.Activity extends Backbone.Model
+
+
 
 

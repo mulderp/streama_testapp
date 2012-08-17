@@ -7,7 +7,7 @@ class Api::V1::ActivitiesController < ApplicationController
   def index
     @activities = exhibit(Activity.all.to_ary)
 
-    respond_with(JSON.pretty_generate(@activities.as_json))
+    respond_with(@activities.to_json)
   end
 
 end

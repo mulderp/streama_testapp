@@ -20,7 +20,7 @@ class Activity
 
   activity :post do
     actor :user, :cache => [:first_name]
-    object :network_update, :cache => [:content]
+    object :network_update, :cache => [:content] # note according to: http://activitystrea.ms/head/activity-schema.html#note
     # target_object :newsfeed
   end
 

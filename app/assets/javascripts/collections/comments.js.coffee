@@ -1,6 +1,6 @@
-class Streamaweb.Collections.Comments extends Backbone.Collection
+class Streamaweb.Comments extends Backbone.Collection
 
-  url: "/api/v1/comments" #activities/" + @id + "/comments"
+  url: "/api/v1/comments" #activities/" + @id + "/comments.json"
 
   fetch: (id) ->
     @id = id

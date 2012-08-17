@@ -1,4 +1,4 @@
-class Streamaweb.Models.Comment extends Backbone.Model
+class Streamaweb.Comment extends Backbone.Model
 
   idAttribute: '_id'
   
