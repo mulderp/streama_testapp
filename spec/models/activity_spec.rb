@@ -29,5 +29,13 @@ describe Activity do
       act.verb.should == :follow
       act.load_instance(:object).should == user_2
     end
+
+    it "can be commented" do
+      act = user.publish_activity(:comment, {actor: user, object: comment, receivers: user.all})
+
+    end
+
+    it "includes comments"
   end
+
 end

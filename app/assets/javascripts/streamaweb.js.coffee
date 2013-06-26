@@ -13,7 +13,7 @@ window.Streamaweb =
     })
 
     $('.comment').each((index) ->
-      window.comments_views.push(new Streamaweb.Views.CommentsIndex({el:$(this)}))
+      window.comments_views.push(new Streamaweb.Views.CommentsForm({el:$(this)}))
     )
     console.log(comments_views)
 

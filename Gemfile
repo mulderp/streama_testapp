@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.12'
+gem 'active_model_serializers'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -8,6 +9,8 @@ gem 'rails', '3.2.6'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'less-rails'
+  gem 'therubyracer'
   gem "twitter-bootstrap-rails"
   gem 'coffee-rails'
   gem 'uglifier', '>= 1.0.3'
@@ -15,6 +18,7 @@ end
 
 gem 'jquery-rails'
 gem 'backbone-on-rails'
+
 gem 'display_case'
 
 # To use ActiveModel has_secure_password
@@ -50,5 +54,5 @@ gem "bson_ext", ">= 1.5.2"
 gem "mongoid"
 gem "devise", ">= 2.0.4"
 gem "streama", :git => "git://github.com/christospappas/streama.git"
-#gem "streama", :path => "../streama"
+# gem "streama", :path => "../streama"
 #gem "pry"
